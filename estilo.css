@@ -1,0 +1,31 @@
+body{
+  margin: 0px;
+  padding: 0px;
+}
+.container{
+  position: absolute;
+  left: 50%;
+  top: 250px;
+  transform: translateX(-50%);
+  /* height: 100%; */
+  /* width: 100%; */
+  /* border: 1px solid; */
+}
+.string_to_binary,
+.binary_to_string{
+  /* border: 1px solid; */
+}
+#out{
+  margin-top: 20px;
+}
+#spinner{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  z-index: 10;
+  display: block;
+}
+#spinner.hide{
+    display: none;
+}

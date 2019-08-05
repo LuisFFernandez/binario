@@ -1,0 +1,133 @@
+<!-- AUTOR: LUIS FERNANDO FERNANDEZ SALINAS
+     FECHA: 01-08-2019
+     UNIVERSIDAD: UNIVALLE LA PAZ, BOLIVIA
+     MATERIA: SISTEMAS DISTRIBUIDOS
+     DOCENTE: INGENIERO REYNALDO ZEBALLOS
+-->
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Sistemas Distribuidos</title>
+<!-- SCRIPTS -->
+    <!-- JQUERY -->
+    <script  src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <!-- ESTILO.CSS -->
+    <link rel="stylesheet" href="estilo.css">
+    <!-- BOOSTRAP -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <!-- ALERTIFY -->
+      <!-- JavaScript -->
+    <script src="alertifyjs/alertify.min.js"></script>
+    <!-- estilo -->
+    <link rel="stylesheet" href="alertifyjs/css/alertify.min.css" />
+    <!-- tema -->
+    <link rel="stylesheet" href="alertifyjs/css/themes/default.min.css" />
+    <!-- SPINNER -->
+    <link rel="stylesheet" href="dist/mSpinnerSwirl.css">
+  </head>
+  <body>
+
+<i class="m-spinner--swirl hide" id="spinner"></i>
+
+    <div class="container">
+      <div class="row justify-content-md-center align-items-center">
+        <!-- MENSAJE A BINARIO -->
+        <div class="col-5 string_to_binary">
+          <div class="card text-center">
+            <div class="card-header">
+              Convertir mensaje a binario.
+            </div>
+            <div class="card-body">
+              <!-- CONTENIDO -->
+              <div class="form-row">
+                  <div class="form-group col-md-6">
+                    <label for="inputEmail4">Ip Origen</label>
+                    <input type="text" class="form-control" id="inputIpOrigen" >
+                  </div>
+                  <div class="form-group col-md-6">
+                    <label for="inputPassword4">Ip Destino</label>
+                    <input type="text" class="form-control" id="inputIpDestino" >
+                  </div>
+              </div>
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="basic-addon3">Ancho de banda</span>
+                </div>
+                <input type="number" class="form-control" id="anchoBanda">
+              </div>
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">Mensaje</span>
+                </div>
+                <textarea class="form-control" aria-label="With textarea" id="inputMensaje"></textarea>
+              </div><br>
+              <div class="input-group">
+                <button type="button" class="btn btn-primary btn-lg btn-block" id="btn_convertir">Convertir</button>
+              </div>
+              <!-- FIN -->
+            </div>
+            <div class="card-footer text-muted">
+              <a href="#" id="clean">Limpiar</a>
+            </div>
+          </div>
+        </div>
+        <!-- FIN -->
+        <div class="col-1"></div>
+        <!-- BINARIO A STRING -->
+          <div class="col-5 binary_to_string">
+          <div class="card text-center">
+            <div class="card-header">
+              Convertir binario a mensaje.
+            </div>
+            <div class="card-body">
+              <div class="form-row">
+                  <div class="form-group col-md-6">
+                    <label for="inputEmail4">Ip Origen</label>
+                    <input type="text" class="form-control" id="inputIpOrigenBinario" readonly="">
+                  </div>
+                  <div class="form-group col-md-6">
+                    <label for="inputPassword4">Ip Destino</label>
+                    <input type="text" class="form-control" id="inputIpDestinoBinario" readonly="">
+                  </div>
+              </div>
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="basic-addon3">Ancho de banda</span>
+                </div>
+                <input type="number" class="form-control" id="anchoBandaBinario" readonly="">
+              </div>
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">Codigo</span>
+                </div>
+                <textarea class="form-control" aria-label="With textarea" id="inputBinario"></textarea>
+              </div><br>
+              <div class="input-group">
+                <button type="button" class="btn btn-primary btn-lg btn-block" id="btn_decode">Decodificar</button>
+              </div>
+            </div>
+            <div class="card-footer text-muted">
+
+            </div>
+          </div>
+        </div>
+        <!-- FIN -->
+        <div class="row col-10" id="out">
+          <div class="col-12">
+            <div class="card text-center">
+              <div class="card-footer text-muted text-left" id="output">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <!-- JAVASCRIPT -->
+  <script src="randomColor.js"></script>
+  <script src="conversor.js"></script>
+</html>
